@@ -1,3 +1,7 @@
+/*
+* Created by Ali khaleghi - 12/18/2017
+*/
+
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -57,6 +61,11 @@ int main() {
 }
 
 void initialize() {
+	CONSOLE_CURSOR_INFO info;
+    info.dwSize = 100;
+    info.bVisible = FALSE;
+    SetConsoleCursorInfo(console, &info);
+   
 	for (int i=0; i<40; i++) {
 		bottomWall[i] = 0;
 		topWall[i] = 0;
